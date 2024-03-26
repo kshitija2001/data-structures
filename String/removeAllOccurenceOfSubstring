@@ -1,0 +1,44 @@
+var findAllOccurence = function(str,s){
+    var flag= false
+    var removed
+    if(str.length == 0){
+        return str
+    }
+    for(i=0;i<str.length;i++){
+        if(str.substring(i,s.length+i) == s){
+         
+            console.log("i=>",i)
+     
+            newString = replaceAll(str,s,"")
+            flag = true
+         
+          
+        }
+
+      
+     
+    }
+    if(flag === true){
+        removed = replaceAll(str,s,"")
+        findAllOccurence(removed,s)
+                }
+                if(flag === false){
+                    return str
+                }
+              
+                return newString
+ 
+}
+
+function replaceAll(string, search, replace) {
+    return string.split(search)[0].join(replace);
+  }
+
+  // Driver code
+//   var str1 = "daabcbaabcbcabc";
+//   var str2 = "abc";
+//     var str1 = "geeksforgeeks";
+//   var str2 = "geeks";
+var str1 = "aabababa";
+ var str2 = "aba";
+  console.log(findAllOccurence(str1, str2));
