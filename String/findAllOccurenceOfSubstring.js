@@ -21,4 +21,5 @@ if(flag === false){
   var str2 = "abc";
 //   var str1 = "geeksforgeeks";
 //   var str2 = "geeks";
-  findAllOccurence(str1, str2);
+let result = findAllOccurence(str1, str2);
+console.log(result)

@@ -1,0 +1,3 @@
+var palinDrome = function(nums){
+    
+}

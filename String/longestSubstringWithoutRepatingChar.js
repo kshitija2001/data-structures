@@ -15,6 +15,7 @@ function longestUniqueSubsttr(str) {
  
     // left and right pointer of sliding window
     let left = 0, right = 0;
+    let string = ""
     while (right < str.length) {
  
         // if character is visited
@@ -31,12 +32,15 @@ function longestUniqueSubsttr(str) {
         }
  
         visited[str.charCodeAt(right)] = true;
+       
+    
  
         // The length of the current window (right - left + 1)
         // is calculated and the answer is updated accordingly.
         maxLength = Math.max(maxLength, right - left + 1);
         right++;
     }
+    console.log("string=>",string)
  console.log("maxLength==>",maxLength)
     return maxLength;
 }
